@@ -1,0 +1,1185 @@
+<TaskerData sr="" dvi="1" tv="6.2.5-beta">
+	<Profile sr="prof331" ve="2">
+		<cdate>1684512383396</cdate>
+		<clp>true</clp>
+		<edate>1686515251393</edate>
+		<flags>8</flags>
+		<id>331</id>
+		<mid0>863</mid0>
+		<nme>Join - List Music</nme>
+		<Share sr="Share">
+			<b>false</b>
+			<d>title</d>
+			<g></g>
+			<p>false</p>
+			<t></t>
+		</Share>
+		<Event sr="con0" ve="2">
+			<code>1668911626</code>
+			<pri>0</pri>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<FilterText>joinlist_mymusic</FilterText>
+					<FilterText-type>java.lang.String</FilterText-type>
+					<FilterTextCaseInsensitive>false</FilterTextCaseInsensitive>
+					<FilterTextCaseInsensitive-type>java.lang.Boolean</FilterTextCaseInsensitive-type>
+					<FilterTextContainsAll>false</FilterTextContainsAll>
+					<FilterTextContainsAll-type>java.lang.Boolean</FilterTextContainsAll-type>
+					<FilterTextExact>false</FilterTextExact>
+					<FilterTextExact-type>java.lang.Boolean</FilterTextExact-type>
+					<FilterTextRegex>false</FilterTextRegex>
+					<FilterTextRegex-type>java.lang.Boolean</FilterTextRegex-type>
+					<FilterTitle>&lt;null&gt;</FilterTitle>
+					<FilterTitle-type>java.lang.String</FilterTitle-type>
+					<FilterTitleCaseInsensitive>false</FilterTitleCaseInsensitive>
+					<FilterTitleCaseInsensitive-type>java.lang.Boolean</FilterTitleCaseInsensitive-type>
+					<FilterTitleContainsAll>false</FilterTitleContainsAll>
+					<FilterTitleContainsAll-type>java.lang.Boolean</FilterTitleContainsAll-type>
+					<FilterTitleExact>false</FilterTitleExact>
+					<FilterTitleExact-type>java.lang.Boolean</FilterTitleExact-type>
+					<FilterTitleRegex>false</FilterTitleRegex>
+					<FilterTitleRegex-type>java.lang.Boolean</FilterTitleRegex-type>
+					<FilterUrl>&lt;null&gt;</FilterUrl>
+					<FilterUrl-type>java.lang.String</FilterUrl-type>
+					<FilterUrlCaseInsensitive>false</FilterUrlCaseInsensitive>
+					<FilterUrlCaseInsensitive-type>java.lang.Boolean</FilterUrlCaseInsensitive-type>
+					<FilterUrlContainsAll>false</FilterUrlContainsAll>
+					<FilterUrlContainsAll-type>java.lang.Boolean</FilterUrlContainsAll-type>
+					<FilterUrlExact>false</FilterUrlExact>
+					<FilterUrlExact-type>java.lang.Boolean</FilterUrlExact-type>
+					<FilterUrlRegex>false</FilterUrlRegex>
+					<FilterUrlRegex-type>java.lang.Boolean</FilterUrlRegex-type>
+					<StartedCatpure>false</StartedCatpure>
+					<StartedCatpure-type>java.lang.Boolean</StartedCatpure-type>
+					<StoppedCatpure>false</StoppedCatpure>
+					<StoppedCatpure-type>java.lang.Boolean</StoppedCatpure-type>
+					<VariableArray>false</VariableArray>
+					<VariableArray-type>java.lang.Boolean</VariableArray-type>
+					<VariableNames>&lt;null&gt;</VariableNames>
+					<VariableNames-type>java.lang.String</VariableNames-type>
+					<com.twofortyfouram.locale.intent.extra.BLURB>Text Filter: joinlist_mymusic</com.twofortyfouram.locale.intent.extra.BLURB>
+					<com.twofortyfouram.locale.intent.extra.BLURB-type>java.lang.String</com.twofortyfouram.locale.intent.extra.BLURB-type>
+					<net.dinglisch.android.tasker.EXTRA_NSR_DEPRECATED>true</net.dinglisch.android.tasker.EXTRA_NSR_DEPRECATED>
+					<net.dinglisch.android.tasker.EXTRA_NSR_DEPRECATED-type>java.lang.Boolean</net.dinglisch.android.tasker.EXTRA_NSR_DEPRECATED-type>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%joinarefileslocal
+Are Files Local Network
+'true' if files were downloaded via local network, false otherwise&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%joincomm
+Command at the right of =:=, if there's only 1 =:=
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%joincomm()
+Commands at the right of =:=, if there's more than 1 =:=
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;%joindeviceapilevel
+Api Level
+OS version the devices is running&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES4&gt;%joindevicecanreceivenotifications
+Can receive notifications
+Indication if the device can receive notifications&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES4&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES5&gt;%joindevicecansendlocation
+Can send location
+Indication if the device can report its location&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES5&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES6&gt;%joindevicecansendsms
+Can send SMS
+Indication if the device can send SMS messages&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES6&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES7&gt;%joindeviceid
+Device Id
+Id for the device&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES7&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES8&gt;%joindevicelocalnetwork
+Local Network
+'true' if device is on local network, 'false' otherwise&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES8&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES9&gt;%joindevicemodel
+Device Model
+Model of the device&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES9&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES10&gt;%joindevicename
+Device Name
+Name the device&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES10&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES11&gt;%joindeviceregid
+Push Id
+Push registration id for the device&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES11&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES12&gt;%joindevicetype
+Device Type
+Type the device&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES12&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES13&gt;%joindevicetypecode
+Device Type Code
+Code representing the type the device&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES13&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES14&gt;%joindeviceuseraccount
+User Account
+Owner account of the device&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES14&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES15&gt;%joinfiles()
+Files
+Files received in the push&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES15&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES16&gt;%joinmessage
+The whole message that was received
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES16&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES17&gt;%joinpar()
+Parameters at the left of =:=
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES17&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES18&gt;%joinsendername
+Sender Name
+Name of the device that sent the push&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES18&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES19&gt;%joinstartedcapture
+Started Capture
+&amp;lt;b&amp;gt;true&amp;lt;/b&amp;gt; if capture started &amp;lt;b&amp;gt;false&amp;lt;/b&amp;gt; if not&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES19&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES20&gt;%joinstoppedcapture
+Stopped Capture
+&amp;lt;b&amp;gt;true&amp;lt;/b&amp;gt; if capture stopped &amp;lt;b&amp;gt;false&amp;lt;/b&amp;gt; if not&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES20&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES21&gt;%jointext
+Text
+Text received in the push&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES21&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES22&gt;%jointitle
+Title
+Title received in the push&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES22&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES23&gt;%joinurl
+URL
+URL received in the push&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES23&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+					<net.dinglisch.android.tasker.extras.REQUESTED_TIMEOUT>0</net.dinglisch.android.tasker.extras.REQUESTED_TIMEOUT>
+					<net.dinglisch.android.tasker.extras.REQUESTED_TIMEOUT-type>java.lang.Integer</net.dinglisch.android.tasker.extras.REQUESTED_TIMEOUT-type>
+					<net.dinglisch.android.tasker.extras.VARIABLE_REPLACE_KEYS>FilterText plugininstanceid plugintypeid </net.dinglisch.android.tasker.extras.VARIABLE_REPLACE_KEYS>
+					<net.dinglisch.android.tasker.extras.VARIABLE_REPLACE_KEYS-type>java.lang.String</net.dinglisch.android.tasker.extras.VARIABLE_REPLACE_KEYS-type>
+					<net.dinglisch.android.tasker.subbundled>true</net.dinglisch.android.tasker.subbundled>
+					<net.dinglisch.android.tasker.subbundled-type>java.lang.Boolean</net.dinglisch.android.tasker.subbundled-type>
+					<plugininstanceid>f4c3f8c6-9900-4ef6-b9c0-32c1d0281c31</plugininstanceid>
+					<plugininstanceid-type>java.lang.String</plugininstanceid-type>
+					<plugintypeid>com.joaomgcd.join.tasker.intent.IntentReceivedPush</plugintypeid>
+					<plugintypeid-type>java.lang.String</plugintypeid-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">com.joaomgcd.join</Str>
+			<Str sr="arg2" ve="3">com.joaomgcd.join.tasker.activity.ActivityConfigReceivedPush</Str>
+			<Int sr="arg3" val="1"/>
+		</Event>
+	</Profile>
+	<Profile sr="prof814" ve="2">
+		<cdate>1684489333270</cdate>
+		<clp>true</clp>
+		<edate>1686515259255</edate>
+		<flags>8</flags>
+		<id>814</id>
+		<mid0>815</mid0>
+		<nme>HTTP Server - List Music</nme>
+		<Event sr="con0" ve="2">
+			<code>2089</code>
+			<pri>0</pri>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%http_request_body
+Body
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%http_request_files()
+Files
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%http_request_multipart_names()
+Files
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;%http_request_multipart_types()
+Files
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES4&gt;%http_request_multipart_values()
+Files
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES4&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES5&gt;%http_request_headers()
+Headers
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES5&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES6&gt;%http_request_method
+Method
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES6&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES7&gt;%http_request_path
+Path
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES7&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES8&gt;%http_request_port
+Port
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES8&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES9&gt;%http_request_id
+Request ID
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES9&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Int sr="arg1" val="8080"/>
+			<Str sr="arg2" ve="3">POST</Str>
+			<Str sr="arg3" ve="3">/serverlist_mymusic*</Str>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="10"/>
+			<Int sr="arg6" val="0"/>
+			<Str sr="arg7" ve="3"/>
+		</Event>
+	</Profile>
+	<Project sr="proj0" ve="2">
+		<cdate>1684495259514</cdate>
+		<name>My PC Music</name>
+		<pids>331,814</pids>
+		<tids>916,651,184,815,818,817,863</tids>
+		<Share sr="Share">
+			<b>false</b>
+			<d>&lt;h2 id="list-my-pc-musicfiles"&gt;List My PC Music/Files&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Interaction between EventGhost &amp;amp; HTTP Server, AutoRemote, Join. The ideal method is the HTTP Server; no limits to the data set.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Reddit &lt;a href="https://www.reddit.com/r/tasker/comments/13ljp29/comment/jksad8k/"&gt;post&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;EventGhost XML - &lt;a href="https://drive.google.com/file/d/1Fwk2RRGKMgSnDCSvsdlrJWcUHHJYl3Rw/view?usp=sharing"&gt;GD&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;u/The_IMPERIAL_One&lt;/strong&gt;&lt;/p&gt;</d>
+			<g></g>
+			<p>false</p>
+			<t></t>
+		</Share>
+	</Project>
+	<Task sr="task184">
+		<cdate>1684493551009</cdate>
+		<edate>1686515286887</edate>
+		<id>184</id>
+		<nme>List MyMusic (HTTP Server)</nme>
+		<pri>100</pri>
+		<Action sr="act0" ve="7">
+			<code>354</code>
+			<label>Set any no. of directories per line without quotes</label>
+			<Str sr="arg0" ve="3">%directory</Str>
+			<Str sr="arg1" ve="3">F:\Songs_SanDisk_32GB
+F:\Songs +</Str>
+			<Str sr="arg2" ve="3">
+</Str>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>547</code>
+			<label>Contains the details of Listed Files. Not possible to delete if EventGhost is running.</label>
+			<Str sr="arg0" ve="3">%output_file</Str>
+			<Str sr="arg1" ve="3">F:\musics.txt</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%directories</Str>
+			<Str sr="arg1" ve="3">%directory(+=:=)</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>39</code>
+			<coll>true</coll>
+			<label>&lt;h1&gt;HTTP Server&lt;/h1&gt;
+&lt;br&gt;
+&lt;br&gt; Just send a message serverlist_mymusic=:=%server_address=:=%output_file=:=ALL_DIRECTORIES_SEPARATED_BY_=:=
+&lt;br&gt;
+&lt;br&gt; %server_address = http://LOCAL_IP:PORT/PATH_TO_RESPONSE
+&lt;br&gt;
+&lt;br&gt; &lt;em&gt;No need for html pages&lt;/em&gt;</label>
+			<Str sr="arg0" ve="3">%method</Str>
+			<Str sr="arg1" ve="3">HTTP Server</Str>
+			<Int sr="arg2" val="1"/>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>341</code>
+			<Int sr="arg0" val="11"/>
+			<Str sr="arg1" ve="3"/>
+			<Str sr="arg2" ve="3">%ipaddress</Str>
+		</Action>
+		<Action sr="act5" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%serveraddress</Str>
+			<Str sr="arg1" ve="3">http://%ipaddress:8080/serverlist_mymusic</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="0"/>
+		</Action>
+		<Action sr="act6" ve="7">
+			<code>1138588429</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<com.twofortyfouram.locale.intent.extra.BLURB>Device: Join PC
+Text: serverlist_mymusic=:=%serveraddress=:=%output_file=:=%directories</com.twofortyfouram.locale.intent.extra.BLURB>
+					<com.twofortyfouram.locale.intent.extra.BLURB-type>java.lang.String</com.twofortyfouram.locale.intent.extra.BLURB-type>
+					<net.dinglisch.android.tasker.JSON_ENCODED_KEYS>parameters</net.dinglisch.android.tasker.JSON_ENCODED_KEYS>
+					<net.dinglisch.android.tasker.JSON_ENCODED_KEYS-type>java.lang.String</net.dinglisch.android.tasker.JSON_ENCODED_KEYS-type>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%joinmessage
+Result Message
+If there's no error, a possible status message&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%err
+Error Code
+Only available if you select &amp;lt;b&amp;gt;Continue Task After Error&amp;lt;/b&amp;gt; and the action ends in error&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%errmsg
+Error Message
+Only available if you select &amp;lt;b&amp;gt;Continue Task After Error&amp;lt;/b&amp;gt; and the action ends in error&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+					<net.dinglisch.android.tasker.extras.VARIABLE_REPLACE_KEYS>parameters plugininstanceid plugintypeid </net.dinglisch.android.tasker.extras.VARIABLE_REPLACE_KEYS>
+					<net.dinglisch.android.tasker.extras.VARIABLE_REPLACE_KEYS-type>java.lang.String</net.dinglisch.android.tasker.extras.VARIABLE_REPLACE_KEYS-type>
+					<net.dinglisch.android.tasker.subbundled>true</net.dinglisch.android.tasker.subbundled>
+					<net.dinglisch.android.tasker.subbundled-type>java.lang.Boolean</net.dinglisch.android.tasker.subbundled-type>
+					<parameters>{"advancedSettings":{"sendCustomMessage":false},"app":{},"desktopSettings":{"commandLine":false},"find":false,"location":false,"notificationSettings":{"notificationDismissOnTouch":false},"pushDevices":"52b0feac352a4ede965d05aae58fad4f","say":{},"screenshot":false,"smsSettings":{},"text":"serverlist_mymusic=:=%serveraddress=:=%output_file=:=%directories","generatedValues":{}}</parameters>
+					<parameters-type>java.lang.String</parameters-type>
+					<plugininstanceid>91a24b34-83d8-4765-a341-3e53cfda19d9</plugininstanceid>
+					<plugininstanceid-type>java.lang.String</plugininstanceid-type>
+					<plugintypeid>com.joaomgcd.join.tasker.intent.IntentSendPush</plugintypeid>
+					<plugintypeid-type>java.lang.String</plugintypeid-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">com.joaomgcd.join</Str>
+			<Str sr="arg2" ve="3">com.joaomgcd.join.tasker.activity.ActivityConfigSendPush</Str>
+			<Int sr="arg3" val="60"/>
+			<Int sr="arg4" val="1"/>
+		</Action>
+		<Action sr="act7" ve="7">
+			<code>40</code>
+		</Action>
+	</Task>
+	<Task sr="task651">
+		<cdate>1685452777015</cdate>
+		<edate>1686516121077</edate>
+		<id>651</id>
+		<nme>ListMyMusic (AutoEG) - Webserver</nme>
+		<pri>100</pri>
+		<Share sr="Share">
+			<b>false</b>
+			<d>title</d>
+			<g></g>
+			<p>false</p>
+			<t></t>
+		</Share>
+		<Action sr="act0" ve="7">
+			<code>547</code>
+			<label>EventGhost PC Webserver Plugin - IP 
+(LAN; WAN if port forwarding)</label>
+			<Str sr="arg0" ve="3">%eg_ip</Str>
+			<Str sr="arg1" ve="3">192.168.1.12</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>547</code>
+			<label>EventGhost PC Webserver Plugin - Port 
+(config; WAN if port forwarding)</label>
+			<Str sr="arg0" ve="3">%eg_port</Str>
+			<Str sr="arg1" ve="3">8080</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>354</code>
+			<label>Set any no. of directories per line without quotes</label>
+			<Str sr="arg0" ve="3">%directory</Str>
+			<Str sr="arg1" ve="3">F:\Songs_SanDisk_32GB
+F:\Songs +</Str>
+			<Str sr="arg2" ve="3">
+</Str>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>547</code>
+			<label>Contains the details of Listed Files. Not possible to delete if EventGhost is running.</label>
+			<Str sr="arg0" ve="3">%output_file</Str>
+			<Str sr="arg1" ve="3">F:\musics.txt</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%directories</Str>
+			<Str sr="arg1" ve="3">%directory(+=:=)</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act5" ve="7">
+			<code>354</code>
+			<Str sr="arg0" ve="3">%message</Str>
+			<Str sr="arg1" ve="3">eglist_mymusic=:=%output_file=:=%directories</Str>
+			<Str sr="arg2" ve="3">=:=</Str>
+		</Action>
+		<Action sr="act6" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%params</Str>
+			<Str sr="arg1" ve="3">%message(+&amp;=:=)</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act7" ve="7">
+			<code>129</code>
+			<Str sr="arg0" ve="3">var inputVar = local('params');
+
+var encodedVar = inputVar.split("&amp;=:=").map(encodeURIComponent).join("&amp;=:=");
+
+setLocal('enparams', encodedVar)</Str>
+			<Str sr="arg1" ve="3"/>
+			<Int sr="arg2" val="1"/>
+			<Int sr="arg3" val="45"/>
+		</Action>
+		<Action sr="act8" ve="7">
+			<code>339</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%http_cookies
+Cookies
+The cookies the server sent in the response in the Cookie:COOKIE_VALUE format. You can use this directly in the 'Headers' field of the HTTP Request action&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%http_data
+Data
+Data that the server responded from the HTTP request.&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%http_file_output
+File Output
+Will always contain the file's full path even if you specified a directory as the File to save.&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;%http_response_code
+Response Code
+The HTTP Code the server responded&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES4&gt;%http_headers()
+Response Headers
+The HTTP Headers the server sent in the response. Each header is in the 'key:value' format&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES4&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES5&gt;%http_response_length
+Response Length
+The size of the response in bytes&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES5&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg10" val="0"/>
+			<Int sr="arg11" val="0"/>
+			<Int sr="arg12" val="1"/>
+			<Str sr="arg2" ve="3">http://%eg_ip:%eg_port/?%enparams</Str>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Int sr="arg8" val="30"/>
+			<Int sr="arg9" val="0"/>
+		</Action>
+	</Task>
+	<Task sr="task815">
+		<cdate>1586252800579</cdate>
+		<edate>1686515253784</edate>
+		<id>815</id>
+		<pri>6</pri>
+		<Action sr="act0" ve="7">
+			<code>547</code>
+			<label>Temp location to receive the file</label>
+			<Str sr="arg0" ve="3">%location</Str>
+			<Str sr="arg1" ve="3">/storage/emulated/0/Tasker/temp/server/</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>39</code>
+			<coll>true</coll>
+			<label>Manipulation of File Data</label>
+			<Str sr="arg0" ve="3">%temp_file_content</Str>
+			<Str sr="arg1" ve="3">Retrieval</Str>
+			<Int sr="arg2" val="1"/>
+		</Action>
+		<Action sr="act10" ve="7">
+			<code>396</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%file_name
+0. File name
+Can also be accessed as an array&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%mt_groups()
+Groups
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%mt_match_found
+Is Match
+true if there was a match, false otherwise&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;%mt_match
+Match
+Can also be accessed as an array&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Int sr="arg1" val="1"/>
+			<Str sr="arg2" ve="3">%text</Str>
+			<Str sr="arg3" ve="3">(?&lt;file_name&gt;(?&lt;=filename=).*)</Str>
+			<Str sr="arg4" ve="3"/>
+		</Action>
+		<Action sr="act11" ve="7">
+			<code>396</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%file_path
+0. File path
+Can also be accessed as an array&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%mt_groups()
+Groups
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%mt_match_found
+Is Match
+true if there was a match, false otherwise&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;%mt_match
+Match
+Can also be accessed as an array&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Int sr="arg1" val="1"/>
+			<Str sr="arg2" ve="3">%text</Str>
+			<Str sr="arg3" ve="3">(?&lt;file_path&gt;(?&lt;=filepath=).*)</Str>
+			<Str sr="arg4" ve="3"/>
+		</Action>
+		<Action sr="act12" ve="7">
+			<code>396</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%folder_name
+0. Folder name
+Can also be accessed as an array&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%mt_groups()
+Groups
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%mt_match_found
+Is Match
+true if there was a match, false otherwise&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;%mt_match
+Match
+Can also be accessed as an array&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Int sr="arg1" val="1"/>
+			<Str sr="arg2" ve="3">%text</Str>
+			<Str sr="arg3" ve="3">(?&lt;folder_name&gt;(?&lt;=foldername=).*)</Str>
+			<Str sr="arg4" ve="3"/>
+		</Action>
+		<Action sr="act13" ve="7">
+			<code>396</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%folder_path
+0. Folder path
+Can also be accessed as an array&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%mt_groups()
+Groups
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%mt_match_found
+Is Match
+true if there was a match, false otherwise&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;%mt_match
+Match
+Can also be accessed as an array&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Int sr="arg1" val="1"/>
+			<Str sr="arg2" ve="3">%text</Str>
+			<Str sr="arg3" ve="3">(?&lt;folder_path&gt;(?&lt;=folderpath=).*)</Str>
+			<Str sr="arg4" ve="3"/>
+		</Action>
+		<Action sr="act14" ve="7">
+			<code>40</code>
+		</Action>
+		<Action sr="act15" ve="7">
+			<code>393</code>
+			<label>Presentation of File Data</label>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""/&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">%file_name
+%folder_name
+%folder_path</Str>
+			<Int sr="arg2" val="1"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3">&lt;b&gt;&lt;font color="#FFB529"&gt;&lt;small&gt;%file_name&lt;/small&gt;&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;small&gt;&lt;small&gt;&lt;font color="cyan"&gt;&lt;b&gt;• Folder:&lt;/b&gt; %folder_name&lt;/font&gt;&lt;br&gt;&lt;font color="#dc143c"&gt;&lt;b&gt;• Path:&lt;/b&gt; %folder_path&lt;/font&gt;&lt;br&gt;</Str>
+			<Str sr="arg5" ve="3">%items</Str>
+			<Str sr="arg6" ve="3"/>
+		</Action>
+		<Action sr="act16" ve="7">
+			<code>378</code>
+			<label>List Data</label>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%ld_button
+Button
+The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%ld_long
+Long
+true if item was long clicked, false otherwise&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%ld_selected
+Selected
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;%ld_selected_index
+Selected Index
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg10" val="1"/>
+			<Int sr="arg11" val="0"/>
+			<Int sr="arg12" val="0"/>
+			<Str sr="arg13" ve="3"/>
+			<Str sr="arg2" ve="3">Music</Str>
+			<Str sr="arg3" ve="3">%items</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Int sr="arg9" val="30"/>
+		</Action>
+		<Action sr="act17" ve="7">
+			<code>548</code>
+			<label>Selected File Absolute Path without Quotes</label>
+			<Str sr="arg0" ve="3">%file_path(%ld_selected_index)</Str>
+			<Int sr="arg1" val="0"/>
+			<Str sr="arg10" ve="3"/>
+			<Int sr="arg11" val="1"/>
+			<Int sr="arg12" val="0"/>
+			<Str sr="arg13" ve="3"/>
+			<Int sr="arg14" val="0"/>
+			<Str sr="arg15" ve="3"/>
+			<Int sr="arg2" val="1"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Int sr="arg9" val="1"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>409</code>
+			<Str sr="arg0" ve="3">%location</Str>
+			<Int sr="arg1" val="1"/>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="1"/>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>548</code>
+			<on>false</on>
+			<Str sr="arg0" ve="3">%http_request_files()
+
+%location</Str>
+			<Int sr="arg1" val="0"/>
+			<Str sr="arg10" ve="3"/>
+			<Int sr="arg11" val="1"/>
+			<Int sr="arg12" val="0"/>
+			<Str sr="arg13" ve="3"/>
+			<Int sr="arg14" val="0"/>
+			<Str sr="arg15" ve="3"/>
+			<Int sr="arg2" val="1"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Int sr="arg9" val="0"/>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>400</code>
+			<Str sr="arg0" ve="3">%http_request_files(1)</Str>
+			<Str sr="arg1" ve="3">%location</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="1"/>
+		</Action>
+		<Action sr="act5" ve="7">
+			<code>412</code>
+			<Str sr="arg0" ve="3">%location</Str>
+			<Str sr="arg1" ve="3"/>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="7"/>
+			<Str sr="arg5" ve="3">%files</Str>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act6" ve="7">
+			<code>417</code>
+			<Str sr="arg0" ve="3">%files(1)</Str>
+			<Str sr="arg1" ve="3">%text</Str>
+			<Int sr="arg2" val="1"/>
+		</Action>
+		<Action sr="act7" ve="7">
+			<code>408</code>
+			<se>false</se>
+			<Str sr="arg0" ve="3">%location</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="1"/>
+		</Action>
+		<Action sr="act8" ve="7">
+			<code>40</code>
+		</Action>
+		<Action sr="act9" ve="7">
+			<code>39</code>
+			<coll>true</coll>
+			<label>Arrangement of File Data</label>
+			<Str sr="arg0" ve="3">%temp_file_arrange</Str>
+			<Str sr="arg1" ve="3">Arrangement</Str>
+			<Int sr="arg2" val="1"/>
+		</Action>
+	</Task>
+	<Task sr="task817">
+		<cdate>1684493551009</cdate>
+		<edate>1686514015448</edate>
+		<id>817</id>
+		<nme>List MyMusic (AR)</nme>
+		<pri>100</pri>
+		<Share sr="Share">
+			<b>false</b>
+			<d>title</d>
+			<g></g>
+			<p>false</p>
+			<t></t>
+		</Share>
+		<Action sr="act0" ve="7">
+			<code>354</code>
+			<label>Set any no. of directories per line without quotes</label>
+			<Str sr="arg0" ve="3">%directory</Str>
+			<Str sr="arg1" ve="3">F:\Songs_SanDisk_32GB
+F:\Songs +</Str>
+			<Str sr="arg2" ve="3">
+</Str>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>547</code>
+			<label>Contains the details of Listed Files. Not possible to delete if EventGhost is running.</label>
+			<Str sr="arg0" ve="3">%output_file</Str>
+			<Str sr="arg1" ve="3">F:\musics.txt</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%directories</Str>
+			<Str sr="arg1" ve="3">%directory(+=:=)</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>300</code>
+			<label>&lt;h1&gt;AutoRemote&lt;/h1&gt;
+&lt;br&gt; Just send a message arlist_mymusic=:=%output_file=:=%directories
+&lt;br&gt; Note: &lt;em&gt;No Action Present, You have to create.&lt;/em&gt;</label>
+		</Action>
+	</Task>
+	<Task sr="task818">
+		<cdate>1684493551009</cdate>
+		<edate>1686514205325</edate>
+		<id>818</id>
+		<nme>List MyMusic (Join)</nme>
+		<pri>100</pri>
+		<Share sr="Share">
+			<b>false</b>
+			<d>title</d>
+			<g></g>
+			<p>false</p>
+			<t></t>
+		</Share>
+		<Action sr="act0" ve="7">
+			<code>354</code>
+			<label>Set any no. of directories per line without quotes</label>
+			<Str sr="arg0" ve="3">%directory</Str>
+			<Str sr="arg1" ve="3">F:\Songs_SanDisk_32GB
+F:\Songs +</Str>
+			<Str sr="arg2" ve="3">
+</Str>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>547</code>
+			<label>Contains the details of Listed Files. Not possible to delete if EventGhost is running.</label>
+			<Str sr="arg0" ve="3">%output_file</Str>
+			<Str sr="arg1" ve="3">F:\musics.txt</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%directories</Str>
+			<Str sr="arg1" ve="3">%directory(+=:=)</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>1138588429</code>
+			<label>&lt;h1&gt;Join&lt;/h1&gt;
+&lt;br&gt; Just send a message joinlist_mymusic=:=%output_file=:=%directories</label>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<com.twofortyfouram.locale.intent.extra.BLURB>Device: Join PC
+Text: joinlist_mymusic=:=%output_file=:=%directories</com.twofortyfouram.locale.intent.extra.BLURB>
+					<com.twofortyfouram.locale.intent.extra.BLURB-type>java.lang.String</com.twofortyfouram.locale.intent.extra.BLURB-type>
+					<net.dinglisch.android.tasker.JSON_ENCODED_KEYS>parameters</net.dinglisch.android.tasker.JSON_ENCODED_KEYS>
+					<net.dinglisch.android.tasker.JSON_ENCODED_KEYS-type>java.lang.String</net.dinglisch.android.tasker.JSON_ENCODED_KEYS-type>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%joinmessage
+Result Message
+If there's no error, a possible status message&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%err
+Error Code
+Only available if you select &amp;lt;b&amp;gt;Continue Task After Error&amp;lt;/b&amp;gt; and the action ends in error&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%errmsg
+Error Message
+Only available if you select &amp;lt;b&amp;gt;Continue Task After Error&amp;lt;/b&amp;gt; and the action ends in error&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+					<net.dinglisch.android.tasker.extras.VARIABLE_REPLACE_KEYS>parameters plugininstanceid plugintypeid </net.dinglisch.android.tasker.extras.VARIABLE_REPLACE_KEYS>
+					<net.dinglisch.android.tasker.extras.VARIABLE_REPLACE_KEYS-type>java.lang.String</net.dinglisch.android.tasker.extras.VARIABLE_REPLACE_KEYS-type>
+					<net.dinglisch.android.tasker.subbundled>true</net.dinglisch.android.tasker.subbundled>
+					<net.dinglisch.android.tasker.subbundled-type>java.lang.Boolean</net.dinglisch.android.tasker.subbundled-type>
+					<parameters>{"advancedSettings":{"sendCustomMessage":false},"app":{},"desktopSettings":{"commandLine":false},"find":false,"location":false,"notificationSettings":{"notificationDismissOnTouch":false},"pushDevices":"52b0feac352a4ede965d05aae58fad4f","say":{},"screenshot":false,"smsSettings":{},"text":"joinlist_mymusic=:=%output_file=:=%directories","generatedValues":{}}</parameters>
+					<parameters-type>java.lang.String</parameters-type>
+					<plugininstanceid>91a24b34-83d8-4765-a341-3e53cfda19d9</plugininstanceid>
+					<plugininstanceid-type>java.lang.String</plugininstanceid-type>
+					<plugintypeid>com.joaomgcd.join.tasker.intent.IntentSendPush</plugintypeid>
+					<plugintypeid-type>java.lang.String</plugintypeid-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">com.joaomgcd.join</Str>
+			<Str sr="arg2" ve="3">com.joaomgcd.join.tasker.activity.ActivityConfigSendPush</Str>
+			<Int sr="arg3" val="60"/>
+			<Int sr="arg4" val="1"/>
+		</Action>
+	</Task>
+	<Task sr="task863">
+		<cdate>1684539762392</cdate>
+		<edate>1686515386381</edate>
+		<id>863</id>
+		<nme>List MyMusic (EG To Join)</nme>
+		<pri>6</pri>
+		<Share sr="Share">
+			<b>false</b>
+			<d>title</d>
+			<g></g>
+			<p>false</p>
+			<t></t>
+		</Share>
+		<Action sr="act0" ve="7">
+			<code>356</code>
+			<Str sr="arg0" ve="3">%joinfiles</Str>
+			<Int sr="arg1" val="1"/>
+			<Str sr="arg2" ve="3"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>37</code>
+			<coll>false</coll>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%joinfiles()</lhs>
+					<op>4</op>
+					<rhs>drive.google</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act10" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act11" ve="7">
+			<code>417</code>
+			<Str sr="arg0" ve="3">%files(1)</Str>
+			<Str sr="arg1" ve="3">%text</Str>
+			<Int sr="arg2" val="1"/>
+		</Action>
+		<Action sr="act12" ve="7">
+			<code>406</code>
+			<label>Delete that received file</label>
+			<Str sr="arg0" ve="3">%files(1)</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="1"/>
+		</Action>
+		<Action sr="act13" ve="7">
+			<code>548</code>
+			<Str sr="arg0" ve="3">%text</Str>
+			<Int sr="arg1" val="0"/>
+			<Str sr="arg10" ve="3"/>
+			<Int sr="arg11" val="1"/>
+			<Int sr="arg12" val="0"/>
+			<Str sr="arg13" ve="3"/>
+			<Int sr="arg14" val="0"/>
+			<Str sr="arg15" ve="3"/>
+			<Int sr="arg2" val="1"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Int sr="arg9" val="1"/>
+		</Action>
+		<Action sr="act14" ve="7">
+			<code>354</code>
+			<Str sr="arg0" ve="3">%attext</Str>
+			<Str sr="arg1" ve="3">%text</Str>
+			<Str sr="arg2" ve="3">
+</Str>
+		</Action>
+		<Action sr="act15" ve="7">
+			<code>356</code>
+			<Str sr="arg0" ve="3">%attext</Str>
+			<Int sr="arg1" val="1"/>
+			<Str sr="arg2" ve="3">%attitle</Str>
+		</Action>
+		<Action sr="act16" ve="7">
+			<code>356</code>
+			<Str sr="arg0" ve="3">%attext</Str>
+			<Int sr="arg1" val="1"/>
+			<Str sr="arg2" ve="3"/>
+		</Action>
+		<Action sr="act17" ve="7">
+			<code>1304982781</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<Dialog>List</Dialog>
+					<Dialog-type>java.lang.String</Dialog-type>
+					<com.twofortyfouram.locale.intent.extra.BLURB>Dialog Type: List
+Title: %attitle
+Title Alignment: Left
+List Type: List
+Texts: %attext()
+Text Size: 20
+Image Width: 100
+Commands: %attext()
+Dim Background: true
+Top Margin: 16
+Bottom Margin: 16
+Bottom Buttons Top Margin: 16
+Bottom Buttons Bottom Margin: 16
+Separator: ,
+Command Variable: atcommand
+Cancelable: true
+Turn Screen On: true</com.twofortyfouram.locale.intent.extra.BLURB>
+					<com.twofortyfouram.locale.intent.extra.BLURB-type>java.lang.String</com.twofortyfouram.locale.intent.extra.BLURB-type>
+					<net.dinglisch.android.tasker.JSON_ENCODED_KEYS>parameters</net.dinglisch.android.tasker.JSON_ENCODED_KEYS>
+					<net.dinglisch.android.tasker.JSON_ENCODED_KEYS-type>java.lang.String</net.dinglisch.android.tasker.JSON_ENCODED_KEYS-type>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%atbutton
+number of the button that was pressed
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%atcommand
+Command
+Selected command&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%atimage
+Image
+Image from selected item&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;%atposition
+Position
+Position that the selected item was on the list&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES4&gt;%attext
+Text
+Selected text&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES4&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES5&gt;%err
+Error Code
+Only available if you select &amp;lt;b&amp;gt;Continue Task After Error&amp;lt;/b&amp;gt; and the action ends in error&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES5&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES6&gt;%errmsg
+Error Message
+Only available if you select &amp;lt;b&amp;gt;Continue Task After Error&amp;lt;/b&amp;gt; and the action ends in error&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES6&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+					<net.dinglisch.android.tasker.extras.VARIABLE_REPLACE_KEYS>parameters Dialog plugininstanceid plugintypeid </net.dinglisch.android.tasker.extras.VARIABLE_REPLACE_KEYS>
+					<net.dinglisch.android.tasker.extras.VARIABLE_REPLACE_KEYS-type>java.lang.String</net.dinglisch.android.tasker.extras.VARIABLE_REPLACE_KEYS-type>
+					<net.dinglisch.android.tasker.subbundled>true</net.dinglisch.android.tasker.subbundled>
+					<net.dinglisch.android.tasker.subbundled-type>java.lang.Boolean</net.dinglisch.android.tasker.subbundled-type>
+					<parameters>{"commandSettings":{"commands":["%attext()"],"longCommands":[]},"gridSettings":{},"imageSettings":{"imageSize":"100","images":[],"imagesRound":false},"listType":"0","advancedSettings":{"closeOnSelect":false,"multipleSelect":false,"outputVariableName":"atcommand","separator":",","triggerEvent":false,"cancelable":true,"turnScreenOn":true},"backgroundSettings":{"dimBackground":true},"dialogButtomButtons":{"buttonsBottomMargin":"16","buttonsTopMargin":"16","commands":[],"images":[],"sizes":[]},"dialogTitleButtons":{"buttonsBottomMargin":"16","buttonsTopMargin":"16","commands":[],"images":[],"sizes":[]},"textSettings":{"texts":["%attext()"],"textSize":"20","useHtml":false},"title":"%attitle","titleAlignment":"0","generatedValues":{}}</parameters>
+					<parameters-type>java.lang.String</parameters-type>
+					<plugininstanceid>73b35c39-50d9-40fb-8d66-e7274b6ebe41</plugininstanceid>
+					<plugininstanceid-type>java.lang.String</plugininstanceid-type>
+					<plugintypeid>com.joaomgcd.autotools.intent.IntentDialog</plugintypeid>
+					<plugintypeid-type>java.lang.String</plugintypeid-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">com.joaomgcd.autotools</Str>
+			<Str sr="arg2" ve="3">com.joaomgcd.autotools.activity.ActivityConfigDialog</Str>
+			<Int sr="arg3" val="60"/>
+			<Int sr="arg4" val="1"/>
+		</Action>
+		<Action sr="act18" ve="7">
+			<code>548</code>
+			<Str sr="arg0" ve="3">%atcommand</Str>
+			<Int sr="arg1" val="0"/>
+			<Str sr="arg10" ve="3"/>
+			<Int sr="arg11" val="1"/>
+			<Int sr="arg12" val="0"/>
+			<Str sr="arg13" ve="3"/>
+			<Int sr="arg14" val="0"/>
+			<Str sr="arg15" ve="3"/>
+			<Int sr="arg2" val="1"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Int sr="arg9" val="1"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>547</code>
+			<label>Received file link</label>
+			<Str sr="arg0" ve="3">%file_link</Str>
+			<Str sr="arg1" ve="3">%joinfiles()</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>547</code>
+			<label>location to receive the file</label>
+			<Str sr="arg0" ve="3">%location</Str>
+			<Str sr="arg1" ve="3">/storage/emulated/0/Tasker/temp/server/</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>339</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%http_cookies
+Cookies
+The cookies the server sent in the response in the Cookie:COOKIE_VALUE format. You can use this directly in the 'Headers' field of the HTTP Request action&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%http_file_output
+File Output
+Will always contain the file's full path even if you specified a directory as the File to save.&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%http_response_code
+Response Code
+The HTTP Code the server responded&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;%http_headers()
+Response Headers
+The HTTP Headers the server sent in the response. Each header is in the 'key:value' format&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES4&gt;%http_response_length
+Response Length
+The size of the response in bytes&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES4&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg10" val="1"/>
+			<Int sr="arg11" val="0"/>
+			<Int sr="arg12" val="1"/>
+			<Str sr="arg2" ve="3">%file_link</Str>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3">%location</Str>
+			<Int sr="arg8" val="30"/>
+			<Int sr="arg9" val="0"/>
+		</Action>
+		<Action sr="act5" ve="7">
+			<code>342</code>
+			<Int sr="arg0" val="5"/>
+			<Str sr="arg1" ve="3">%location/uc</Str>
+			<Str sr="arg2" ve="3">%texist</Str>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="1"/>
+		</Action>
+		<Action sr="act6" ve="7">
+			<code>406</code>
+			<label>Deleting some extra trash files that came along with HTTP Request</label>
+			<Str sr="arg0" ve="3">%location/uc</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="1"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%texist</lhs>
+					<op>2</op>
+					<rhs>true</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act7" ve="7">
+			<code>412</code>
+			<Str sr="arg0" ve="3">%location</Str>
+			<Str sr="arg1" ve="3">*.txt</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="7"/>
+			<Str sr="arg5" ve="3">%files</Str>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act8" ve="7">
+			<code>43</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%joinfiles()</lhs>
+					<op>4</op>
+					<rhs>AutoRemote\/Files</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act9" ve="7">
+			<code>547</code>
+			<label>location to receive the file</label>
+			<Str sr="arg0" ve="3">%files(1)</Str>
+			<Str sr="arg1" ve="3">%joinfiles()</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+	</Task>
+	<Task sr="task916">
+		<cdate>1685452777015</cdate>
+		<edate>1686515970719</edate>
+		<id>916</id>
+		<nme>AutoEventGhost - Webserver Plugin</nme>
+		<pri>100</pri>
+		<Share sr="Share">
+			<b>false</b>
+			<d>title</d>
+			<g></g>
+			<p>false</p>
+			<t></t>
+		</Share>
+		<Action sr="act0" ve="7">
+			<code>547</code>
+			<label>EventGhost PC Webserver Plugin - IP 
+(LAN; WAN if port forwarding)</label>
+			<Str sr="arg0" ve="3">%eg_ip</Str>
+			<Str sr="arg1" ve="3">192.168.1.12</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>547</code>
+			<label>EventGhost PC Webserver Plugin - Port 
+(config; WAN if port forwarding)</label>
+			<Str sr="arg0" ve="3">%eg_port</Str>
+			<Str sr="arg1" ve="3">8080</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>354</code>
+			<label>Example command 1</label>
+			<Str sr="arg0" ve="3">%message</Str>
+			<Str sr="arg1" ve="3">hey logan=:=how are you?=:=bye!</Str>
+			<Str sr="arg2" ve="3">=:=</Str>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>354</code>
+			<label>Example command 2</label>
+			<Str sr="arg0" ve="3">%message</Str>
+			<Str sr="arg1" ve="3">message=:=hello world</Str>
+			<Str sr="arg2" ve="3">=:=</Str>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%params</Str>
+			<Str sr="arg1" ve="3">%message(+&amp;=:=)</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act5" ve="7">
+			<code>129</code>
+			<Str sr="arg0" ve="3">var inputVar = local('params');
+
+var encodedVar = inputVar.split("&amp;=:=").map(encodeURIComponent).join("&amp;=:=");
+
+setLocal('enparams', encodedVar)</Str>
+			<Str sr="arg1" ve="3"/>
+			<Int sr="arg2" val="1"/>
+			<Int sr="arg3" val="45"/>
+		</Action>
+		<Action sr="act6" ve="7">
+			<code>339</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%http_cookies
+Cookies
+The cookies the server sent in the response in the Cookie:COOKIE_VALUE format. You can use this directly in the 'Headers' field of the HTTP Request action&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%http_data
+Data
+Data that the server responded from the HTTP request.&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%http_file_output
+File Output
+Will always contain the file's full path even if you specified a directory as the File to save.&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;%http_response_code
+Response Code
+The HTTP Code the server responded&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES4&gt;%http_headers()
+Response Headers
+The HTTP Headers the server sent in the response. Each header is in the 'key:value' format&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES4&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES5&gt;%http_response_length
+Response Length
+The size of the response in bytes&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES5&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg10" val="0"/>
+			<Int sr="arg11" val="0"/>
+			<Int sr="arg12" val="1"/>
+			<Str sr="arg2" ve="3">http://%eg_ip:%eg_port/?%enparams</Str>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Int sr="arg8" val="30"/>
+			<Int sr="arg9" val="0"/>
+		</Action>
+	</Task>
+</TaskerData>
