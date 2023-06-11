@@ -1,2 +1,2 @@
 # automation
- Personal archive of automated tasks
+ Personal archive of some automated tasks and related resources.
