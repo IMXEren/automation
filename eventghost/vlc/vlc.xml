@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<EventGhost Version="0.5.0-rc6" Guid="{775320DD-0D64-4A60-BA20-D32C5A335F8F}" Time="1686303838.54">
+    <Autostart Name="Autostart" XML_Guid="{AFC2F827-9065-4D2E-8901-D6FCC4E7A39A}" Expanded="True">
+        <Plugin XML_Guid="{00DA63F3-EADF-4717-96BE-CE39AD1ED53F}" Identifier="VLC" Guid="{02929D1C-7567-414C-84D1-F8D71D6FD7B3}" File="VLC">
+            gAJYCQAAAGxvY2FsaG9zdHEATdIEiIdxAS4=
+        </Plugin>
+        <Plugin XML_Guid="{3EEF5642-0A07-4CE7-8E7E-69DFAC71EF54}" Identifier="Webserver" Guid="{E4305D8E-A3D3-4672-B06E-4EA1F0F6C673}" File="Webserver">
+            gAIoWAQAAABIVFRQcQBNkB9YAAAAAHEBWAoAAABFdmVudEdob3N0cQJoAWgBfXEDiVgBAAAALHEEWAIAAAA7O3EFaAFoAYl0cQYu
+        </Plugin>
+        <Plugin XML_Guid="{02DEB7E7-D1F6-4593-9401-C0785C1A04DC}" Identifier="Task" Guid="{D1748551-C605-4423-B392-FB77E6842437}" File="Task">
+            gAIpLg==
+        </Plugin>
+    </Autostart>
+    <Macro Name="Start" XML_Guid="{D9B6AD2A-5867-4EB2-B0E4-1410F0149021}" Expanded="True">
+        <Action Name="This one can be used if you have tweaked the __init__.py and the stream is not a variable" XML_Guid="{849B14E7-2B09-4067-9552-2B08C8206DCD}">
+            EventGhost.Comment()
+        </Action>
+        <Action Enabled="False" XML_Guid="{64A0AA6D-9FE6-42AC-84CD-E3150CD859B3}">
+            VLC.Start(u'"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"')
+        </Action>
+        <Action Name="Get Playlist Info" XML_Guid="{DE14A399-AA4E-4DFD-9856-78CF6703E47C}">
+            EventGhost.PythonScript(u'import urllib\nimport subprocess\nimport os\nimport eg\n\ndef ext(path):\n    ext = os.path.splitext(os.path.basename(path))[1]\n    return ext\n\n#eg.globals.playlist = "test.m3u"\n\ndirectory_path = r\'H:\\[MultiMedia]\\[MP3s]\\[WinAmp playlists]\'\nfile_name = eg.globals.playlist\n\neg.media_path = os.path.join(directory_path, file_name)\ntype = ext(eg.media_path)\neg.test_str = ""\n\ndef get_total_duration(playlist_path):\n    \n    total_duration = 0\n    total_items = 0\n    track_titles = []\n    \n    eg.playlist_name = os.path.basename(playlist_path)\n\n    with open(playlist_path, \'r\') as playlist_file:\n        for line in playlist_file:\n            line = line.strip()\n            if line.startswith(\'#\'):  # Skip comments or metadata lines\n                continue\n            try:\n                # Use ffprobe command to get the audio file duration\n                cmd = \'ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "{}"\'.format(line)\n                result = subprocess.check_output(cmd, shell=True)\n                duration = float(result)\n                total_duration += duration\n                total_items += 1\n                \n                # Extract the track title from the path\n                title = os.path.splitext(os.path.basename(line))[0]\n                track_titles.append(title)\n            \n            except Exception as e:\n                print("Error processing file {}: {}".format(line, e))\n\n    return total_duration, total_items, track_titles\n\ndef format_duration(total_duration):\n    hours = int(total_duration / 3600)\n    minutes = int((total_duration % 3600) / 60)\n    seconds = int(total_duration % 60)\n    \n    formatted_duration = "{:02d}:{:02d}:{:02d}".format(hours, minutes, seconds)\n    return formatted_duration\n\n\nif type == ".m3u":\n    # Example usage\n    # playlist_path = r\'C:\\Users\\tsaty\\Documents\\Automation\\test.m3u\'\n    playlist_path = eg.media_path\n    eg.playlist_duration_sec, eg.playlist_items, eg.track_titles = get_total_duration(playlist_path)\n    eg.playlist_duration = format_duration(eg.playlist_duration_sec)\n    print("Playlist Duration: {}".format(eg.playlist_duration))\n    print("Playlist Items: {}".format(eg.playlist_items))\n        \n        \n#eg.playlist_name = Playlist name\n#eg.playlist_duration_sec = Playlist duration in seconds (type - float)\n#eg.playlist_duration = Playlist duration in HH:MM:SS\n#eg.playlist_items = Playlist items')
+        </Action>
+        <Action XML_Guid="{8F0EB166-45E9-45E6-881B-44E1E18E2DF0}">
+            System.Command(u'"C:\\Program Files\\VideoLAN\\VLC\\vlc.exe" --extraintf=rc --rc-host=localhost:1234 --rc-quiet --rc-show-pos "{eg.media_path}"', False, False, u'', False, False, False, False, False)
+        </Action>
+        <Action Name="This one can be used if the stream is a variable; independent of tweaking __init__.py" XML_Guid="{849B14E7-2B09-4067-9552-2B08C8206DCD}">
+            EventGhost.Comment()
+        </Action>
+        <Action XML_Guid="{26F302E4-C171-4038-925E-AF483D516FE8}">
+            EventGhost.Wait(0.1)
+        </Action>
+        <Action XML_Guid="{C19DBB8C-2823-40A4-AF44-604F009FA74A}">
+            VLC.CurrentPlaylistStatus()
+        </Action>
+    </Macro>
+    <Macro Name="Start VLC Controls - Hotkeys" XML_Guid="{46A8D0E1-F02E-4C8F-AEB7-6A4F4EE46DBF}">
+        <Event Name="Task.Created.vlc" XML_Guid="{537283EB-2A94-4625-8EE3-0E5EFD160E6D}" />
+        <Action XML_Guid="{DD1930DF-5DBD-4FF6-B3CF-2D68E2C1CBC1}">
+            System.Execute(u'C:\\Users\\tsaty\\Desktop\\vlc.ahk', u'', 0, False, 2, u'', False, False, u'', False, False, False, False)
+        </Action>
+    </Macro>
+    <Macro Name="Stop VLC Controls - Hotkeys" XML_Guid="{46A8D0E1-F02E-4C8F-AEB7-6A4F4EE46DBF}">
+        <Event Name="Task.Destroyed.vlc" XML_Guid="{537283EB-2A94-4625-8EE3-0E5EFD160E6D}" />
+        <Action XML_Guid="{9AACD313-F0C3-44EE-AB41-78C4A2659DAC}">
+            System.Execute(u'C:\\Users\\tsaty\\Desktop\\kill-vlc_ahk.bat', u'', 3, False, 2, u'', False, False, u'', False, False, False, False)
+        </Action>
+    </Macro>
+    <Macro Name="Quit" XML_Guid="{20F6451F-DF65-4160-B115-7ADBBE02F693}">
+        <Event Name="HTTP.vlc=quit" XML_Guid="{434E0F51-6F2C-48D8-BA86-8367C033FC97}" />
+        <Action XML_Guid="{8BA56DFB-CCF5-435B-B9F5-44BFEDF9F939}">
+            VLC.Quit()
+        </Action>
+    </Macro>
+    <Macro Name="Play-Pause" XML_Guid="{657F7FD6-E57A-49D7-ACF4-B0E39E4461C8}">
+        <Event Name="HTTP.vlc=play-pause" XML_Guid="{ABE08421-BD1C-4EF4-ADC1-E81862029428}" />
+        <Action XML_Guid="{C556BB23-48CC-41D7-BCB7-F283248B585A}">
+            VLC.Pause()
+        </Action>
+    </Macro>
+    <Macro Name="Previous" XML_Guid="{C1F8C5FB-4FC0-4A63-8CD8-3C433D9F1264}">
+        <Event Name="HTTP.vlc=prev" XML_Guid="{2242A616-4932-46A9-96EE-F1F69FCF75E9}" />
+        <Action XML_Guid="{C07D0225-8600-40F4-ADB9-5F2D54A8F455}">
+            VLC.PreviousPlaylistItem()
+        </Action>
+        <Action XML_Guid="{26F302E4-C171-4038-925E-AF483D516FE8}">
+            EventGhost.Wait(0.1)
+        </Action>
+        <Action XML_Guid="{C19DBB8C-2823-40A4-AF44-604F009FA74A}">
+            VLC.CurrentPlaylistStatus()
+        </Action>
+    </Macro>
+    <Macro Name="Next" XML_Guid="{C1F8C5FB-4FC0-4A63-8CD8-3C433D9F1264}">
+        <Event Name="HTTP.vlc=next" XML_Guid="{8100DF60-94D4-4D48-908B-9A711584493A}" />
+        <Action XML_Guid="{1917C0FD-28F1-4ED6-A009-5CEC22F1200F}">
+            VLC.NextPlaylistItem()
+        </Action>
+        <Action XML_Guid="{26F302E4-C171-4038-925E-AF483D516FE8}">
+            EventGhost.Wait(0.1)
+        </Action>
+        <Action XML_Guid="{C19DBB8C-2823-40A4-AF44-604F009FA74A}">
+            VLC.CurrentPlaylistStatus()
+        </Action>
+    </Macro>
+    <Macro Name="Track End" XML_Guid="{9E5B224D-36BB-443E-B65A-47107E2FEA28}">
+        <Event Name="VLC.status change: ( play state: 4 ): End" XML_Guid="{2A2235CA-AEAB-4749-A870-13853A11D846}" />
+        <Action XML_Guid="{C19DBB8C-2823-40A4-AF44-604F009FA74A}">
+            VLC.CurrentPlaylistStatus()
+        </Action>
+    </Macro>
+    <Macro Name="Get Info" XML_Guid="{A55BC3FC-255D-47DE-BC0C-1F85526BEC99}">
+        <Event Name="VLC.status change: ( new input: file:*" XML_Guid="{362EEA99-723C-4EA1-BDDD-93CED235911D}" />
+        <Action Name="Don't process the same track" XML_Guid="{9283CB4D-2FF3-451F-9645-7E9220F73A48}">
+            EventGhost.PythonScript(u'import eg\n\n# Check if the variables match\nif eg.test_str == eg.event.string:\n    # Stop the script\n    eg.StopMacro()\n#else:\n    # Continue executing the rest of the script\n    #print("Variables do not match, script continues...")\n    # Rest of your script goes here')
+        </Action>
+        <Action Name="Get Track Info" XML_Guid="{DE14A399-AA4E-4DFD-9856-78CF6703E47C}">
+            EventGhost.PythonScript(u'import re\nimport urllib\nimport subprocess\nimport os\nimport eg\n\ndef media_path():\n    regex = r"(?&lt;=new input: file:///).*(?= )"\n    eg.test_str = eg.event.string\n    matches = re.finditer(regex, eg.test_str, re.MULTILINE)\n    for matchNum, match in enumerate(matches, start=1):\n        file_path_encoded = match.group()\n        return file_path_encoded\n\ndef url_decode(text):\n    decoded_text = urllib.unquote(text)\n    return decoded_text\n\nfile_path_encoded = media_path()\nfile_path = url_decode(file_path_encoded)\ntype = "mp3"\nprint("MP3 Path: {}".format(file_path))\n\n\ndef get_mp3_duration(mp3_path):\n    try:\n        # Use ffprobe command to get the audio file duration\n        cmd = \'ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "{}"\'.format(mp3_path)\n        result = subprocess.check_output(cmd, shell=True)\n        duration = float(result)\n        return duration\n    except Exception as e:\n        print("Error processing file {}: {}".format(mp3_path, e))\n        return None\n\ndef format_duration(total_duration):\n    hours = int(total_duration / 3600)\n    minutes = int((total_duration % 3600) / 60)\n    seconds = int(total_duration % 60)\n    \n    formatted_duration = "{:02d}:{:02d}:{:02d}".format(hours, minutes, seconds)\n    return formatted_duration\n\ndef get_mp3_bitrate(mp3_path):\n    try:\n        # Use ffprobe command to get the audio file bitrate\n        cmd = \'ffprobe -v error -show_entries format=bit_rate -of default=noprint_wrappers=1:nokey=1 "{}"\'.format(mp3_path)\n        result = subprocess.check_output(cmd, shell=True)\n        bitrate = int(result)\n        return bitrate\n    except Exception as e:\n        print("Error processing file {}: {}".format(mp3_path, e))\n        return None\n    \ndef format_bitrate(bitrate):\n    formatted_bitrate = "{}".format(int(bitrate / 1000))\n    return formatted_bitrate\n    \nif type == "mp3":\n    #mp3_path = r\'C:\\Users\\tsaty\\Documents\\Automation\\test.mp3\'\n    mp3_path = file_path\n    eg.mp3_duration_sec = get_mp3_duration(mp3_path)\n    eg.mp3_bitrate = get_mp3_bitrate(mp3_path)\n    if eg.mp3_duration_sec is not None:\n        eg.mp3_duration = format_duration(eg.mp3_duration_sec)\n        eg.bitrate = format_bitrate(eg.mp3_bitrate)\n        eg.current_track = os.path.splitext(os.path.basename(mp3_path))[0]\n        print("MP3 Track: {}".format(eg.current_track))\n        print("MP3 Duration: {}".format(eg.mp3_duration))\n        print("MP3 Bitrate: {} Kbps".format(eg.bitrate))\n        \n        search_title = eg.current_track\n        total_items = eg.playlist_items\n        if search_title in eg.track_titles:\n            match_position = eg.track_titles.index(search_title) + 1  # Add 1 to match_position to account for 0-based indexing\n            print("Playing {} of {}".format(match_position, total_items))\n            \n            if match_position + 1 &lt; total_items:\n                next_track = eg.track_titles[match_position]\n                print("Next Track: {}".format(next_track))\n        \n\n#eg.mp3_duration_sec = Playlist duration in seconds (type - float)\n#eg.mp3_duration = Playlist duration in HH:MM:SS')
+        </Action>
+    </Macro>
+</EventGhost>

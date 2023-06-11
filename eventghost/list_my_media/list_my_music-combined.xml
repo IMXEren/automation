@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<EventGhost Version="0.5.0-rc6" Guid="{E904A22B-7BBD-49B8-B9A5-CB2AB57A03D2}" Time="1686513759.39">
+    <Autostart Name="Autostart" XML_Guid="{C3599FD0-EB5F-4293-A1BE-21EB58D8969C}" Expanded="True">
+        <Plugin XML_Guid="{ED37E41F-0105-4350-949E-57BC5A5E324B}" Identifier="Webserver" Guid="{E4305D8E-A3D3-4672-B06E-4EA1F0F6C673}" File="Webserver">
+            gAIoWAQAAABIVFRQcQBNkB9YLQAAAEM6XFVzZXJzXHRzYXR5XERvY3VtZW50c1xBdXRvbWF0aW9uXFdlYnNlcnZlcnEBWAoAAABFdmVudEdob3N0cQJYAAAAAHEDaAN9cQSJWAEAAAAscQVYAgAAADs7cQZoA2gDiXRxBy4=
+        </Plugin>
+        <Action Name='Create a folder with a blank "index.html" file placed inside it. Now, add that folder in the Webserver plugin &gt; config &gt; HTML Documents root.' XML_Guid="{A52591B4-4593-4415-AC30-31B6BC888047}">
+            EventGhost.Comment()
+        </Action>
+        <Action Name=" Otherwise whenever a HTTP Request is made to your server, status code will be Error 404 (Tasker error included) despite the completion of the request." XML_Guid="{AB39E752-F725-458E-8E90-8E44CF157348}">
+            EventGhost.Comment()
+        </Action>
+        <Plugin XML_Guid="{4E926D3E-DBE3-44F2-89AE-4512FE03DA70}" Identifier="AutoRemote" Guid="{C18A174E-71E3-4C74-9A2B-8653CE9991E1}" File="AutoRemote">
+            gAIoVQpBdXRvUmVtb3RlcQBNGgdYCgAAAEV2ZW50R2hvc3RxAV1xAigoWA8AAAByZWFsbWUgR1QgTkVPIDNxA1UAcQRYIAAAADAwMjU0YjYwZTkwMTRlODE5MTg5NWM2YTYyZWFmMjA2cQVYAAAAAHEGiU50cQcoWAwAAAByZWFsbWUgR1QgQVJxCGgEWJgAAABlQnhNbE9CUklJYzpBUEE5MWJFY1Zib0hTMXpWSUxFYWhXb29Td2loSDhGdDJNY2lId1BtZVRPUlhqV2U3WHp6bjJ3V1F5WWlub1NORWw5RXZTOXZybGtQV0Nia0g5TzE5NmhVZFZPbkFKQmJ2R0tPVURpUFRkaHowdTQxTXV1cWQ4bERNUWFUOWlaNEFWX0J0R2xQZ3hCR3EJaAaJTnRxCmVoBlgoAAAAQzpcVXNlcnNcdHNhdHlcRG9jdW1lbnRzXEF1dG9tYXRpb25cSm9pbnELiFhnAAAAMS8vMGNIUlQ1c2hZanhLS0NnWUlBUkFBR0F3U053Ri1MOUlyNVJtM2FaRGc1aWY0bVVzYXlXM090TjhvVm5jNzlPeEVoYV9EeFk4SXo4by01RHI0b3h1ejhZbEhKTGVBbEt1dzZLNHEMiYhYEgAAAFNlbmQgdG8gRXZlbnRHaG9zdHENiGgGiHRxDi4=
+        </Plugin>
+        <Action Name="Start Join" XML_Guid="{82FD7B15-B238-4B0C-BE92-D7CC756B9E27}">
+            EventGhost.PythonScript(u'class JoinRequest(object):\n    """Base Class for Requests to Join API"""\n\n    API_KEY = "ENTER HERE"\n    DEVICE = None\n    \n    class JoinApiError(BaseException):\n        """Error For Join API Requests"""\n\n    import urllib\n    import urllib2\n    import json\n\n    def __init__(self, **params):\n\n        params["apikey"] = self.API_KEY\n        params["deviceId"] = self.DEVICE\n\n        body = self.urllib.urlencode(params)\n\n        join_request = self.urllib2.urlopen(\n            "https://joinjoaomgcd.appspot.com/_ah/api/messaging/v1/sendPush",\n            data=body.encode()\n        )\n            \n        msg = self.json.loads(\n            join_request.read()\n        ).get("errorMessage", False)\n            \n        if msg:\n            raise self.JoinApiError(msg)\n        \n    @staticmethod\n    def register(*devices):\n        """Add devices to eg.globals"""\n        \n        for device in devices:\n            setattr(eg.globals, device.__name__, device)\n            print("ADDED: " + device.__name__ + "(**params)")\n        print("DONE")\n        \nclass JoinPushDeviceOne(JoinRequest):\n    DEVICE = "ENTER HERE"\n\t\nclass JoinPushDeviceTwo(JoinRequest):\n    DEVICE = "ENTER HERE"\n\nJoinRequest.register(\n\tJoinPushDeviceOne,\n\tJoinPushDeviceTwo\n\t)')
+        </Action>
+        <Plugin XML_Guid="{40F789F2-6E21-4F85-B05B-DCE07CB0710C}" Identifier="Speech" Guid="{76A1638D-1D7D-4582-A726-A17B1A6FC723}" File="Speech">
+            gAIpLg==
+        </Plugin>
+        <Plugin XML_Guid="{AA08EF8B-E5DF-4178-B18A-8C6A4CD1F7C4}" Identifier="Winamp" Guid="{4A22DD6A-5E2C-4500-90B4-47F5C58FD9CA}" File="Winamp">
+            gAIpLg==
+        </Plugin>
+    </Autostart>
+    <Macro Name="AutoEventGhost" XML_Guid="{4066DA10-A4D4-4EFC-A2AD-CEBBB88F01D3}" Expanded="True">
+        <Event Name="HTTP.*" XML_Guid="{E49189EB-5199-40BF-A9D3-D792EECA3383}" />
+        <Action Name="AR Alternative Variables" XML_Guid="{968946E3-8109-42B3-89EB-439D50A18E6C}">
+            EventGhost.PythonScript(u'import re\n\ndef remove_prefix_with_regex(string, prefix):\n    pattern = r\'^\' + re.escape(prefix + ".")\n    return re.sub(pattern, \'\', string, count=1)\n\n# WebServer event prefix. Webserver plugin &gt; config &gt; event prefix\nwebserver_prefix = "HTTP"\nstring_with_prefix = eg.event.string\nstring_without_prefix = remove_prefix_with_regex(string_with_prefix, webserver_prefix)\npayload_str = \'\'.join(eg.event.payload)\n\n# Assign the replica of sent message by AutoRemote\neg.webmessage = string_without_prefix + payload_str\n\n# Split the string by "=:=" delimiter\nsplit_values = eg.webmessage.split("=:=")\n\n# Assign the first element to eg.webpar\neg.webpar = split_values[0]\neg.webpar = eg.webpar.split(" ")\n\n# Assign the rest of the elements to eg.webcomm as an array\neg.webcomm = split_values[1:]\n\n# These variables can be accessed from anywhere ONLY after this macro runs first.\nprint("eg.webmessage:", eg.webmessage)\nprint("eg.webpar:", eg.webpar)\nprint("eg.webcomm:", eg.webcomm)\n')
+        </Action>
+        <Action Name="Let this macro be after Autostart" XML_Guid="{AB39E752-F725-458E-8E90-8E44CF157348}">
+            EventGhost.Comment()
+        </Action>
+    </Macro>
+    <Folder Name="List MyMusic" XML_Guid="{D38C0302-20A5-4B32-B6D2-5C6F485CC8EB}" Expanded="True">
+        <Macro Name="List Music Files (HTTP Server Method)" XML_Guid="{F17D970B-26EA-4613-B263-3C4247E1741E}">
+            <Event Name="AutoRemote.Message.serverlist_mymusic" XML_Guid="{D6BFAB99-07EA-4724-88E1-E6B32FD6AF85}" />
+            <Action Name="Recursive Multiple Folder structure support" XML_Guid="{F52111E7-912C-4002-887A-D2A191F20A58}">
+                EventGhost.Comment()
+            </Action>
+            <Action Name="List Music Files" XML_Guid="{29BAF7DF-ED3A-4C7C-857B-8B8C9BD0E95A}">
+                EventGhost.PythonScript(u'import os\nimport requests\nimport eg\n\n# Get the payload list from eg.event.payload.arcomm[2:]\npayload_list = (eg.event.payload.arcomm[2:])\ndirectories = [str(element) for element in payload_list]\n#directories = [\n    #"F:\\Songs_SanDisk_32GB",\n    #"F:\\Songs +"\n#]\n\noutput_file = (eg.event.payload.arcomm[1])\n#output_file = "F:\\musics.txt"\n\nserver_address = (eg.event.payload.arcomm[0])\n#server_address = \'http://192.168.1.3:8080/serverlist_mymusic\'\n\n# Create an empty list to store the file names\nmp3_files = []\n\n# Recursive function to traverse directories and collect file names\ndef traverse_directories(directory):\n    for root, dirs, files in os.walk(directory):\n        for filename in files:\n            # Get the full file path\n            file_path = os.path.join(root, filename)\n            file_name = os.path.basename(file_path)\n            # Get the parent folder path\n            folder_path = os.path.dirname(file_path)\n            # Get the parent folder name\n            folder_name = os.path.basename(folder_path)\n\n            # Append the file details to the string\n            details = "filename=" + file_name + "\\n" + "filepath=" + file_path + "\\n" + "foldername=" + folder_name + "\\n" + "folderpath=" + folder_path + "\\n\\n"\n\n            file_details.append(details)\n            \n# Create an empty list to store the file details\nfile_details = []\n\n# Traverse all the main directories\nfor directory in directories:\n    traverse_directories(directory)\n\nwith open(output_file, "w") as file:\n    file.writelines(file_details)\n    \nprint("Filenames have been written to", output_file)\n\nurl = server_address\n# Replace with your server\'s upload endpoint\n\nfiles = {\'file\': open(output_file, \'rb\')}\n\nresponse = requests.post(url, files=files)\n\nif response.text:\n    print(\'File upload failed\')\n    print(\'Error:\', response.text)\nelse:\n    print(\'File uploaded successfully\')\n    ')
+            </Action>
+        </Macro>
+        <Macro Name="List Music Files (AutoRemote or Join Method; Receives Push)" XML_Guid="{F97A45A5-8DE5-4C7F-8BB1-C6220C988C5C}">
+            <Event Name="AutoRemote.Message.arlist_mymusic" XML_Guid="{D5122C95-539A-4C09-977F-2C1A87042E70}" />
+            <Event Name="AutoRemote.Message.joinlist_mymusic" XML_Guid="{422482D5-CB0C-43D3-A0B7-5C4DD1CFD161}" />
+            <Action Name="Added! Recursive Multiple Folder structure support" XML_Guid="{A4B4EF94-0C57-43A8-B9B6-B51F1A8D9A67}">
+                EventGhost.Comment()
+            </Action>
+            <Action Name="List Music Files (Non-Recursive)" Enabled="False" XML_Guid="{D7731274-C990-4A74-B0A8-3C24695FE2D9}">
+                EventGhost.PythonScript(u'import os\n\ndirectory = r"F:\\Songs [SanDisk 32GB]"\noutput_file = r"F:\\musics.txt"\n\n# Get a list of all the files in the directory\nfiles = os.listdir(directory)\n\n# Create an empty array to store the file names\nmp3_files = []\n\n# Add each file name to the array\nfor filename in files:\n    mp3_files.append(filename)\n\n# Write the filenames to a text file\nwith open(output_file, "w") as file:\n    for filename in mp3_files:\n        file.write(filename + "\\n")\n\nprint("Music List Generated", mp3_files)\n    \n')
+            </Action>
+            <Action Name="List Music Files (Recursive)" XML_Guid="{CBD8226D-A3AA-4980-B6F7-52A1E66E4DCD}">
+                EventGhost.PythonScript(u'import os\nimport eg\n\n# Get the payload list from eg.event.payload.arcomm[2:]\npayload_list = (eg.event.payload.arcomm[1:])\ndirectories = [str(element) for element in payload_list]\n#directories = [\n    #"F:\\Songs_SanDisk_32GB",\n    #"F:\\Songs +"\n#]\n\noutput_file = (eg.event.payload.arcomm[0])\n#output_file = "F:\\musics.txt"\n\n# Recursive function to traverse directories and collect file names\ndef traverse_directories(directory):\n    for root, dirs, files in os.walk(directory):\n        for filename in files:\n            # Get the full file path\n            file_path = os.path.join(root, filename)\n            file_name = os.path.basename(file_path)\n            # Get the parent folder path\n            folder_path = os.path.dirname(file_path)\n            # Get the parent folder name\n            folder_name = os.path.basename(folder_path)\n\n            # Append the file details to the string\n            #Complex details\n            #details = "filename=" + file_name + "\\n" + "filepath=" + file_path + "\\n" + "foldername=" + folder_name + "\\n" + "folderpath=" + folder_path + "\\n\\n"\n            \n            #Simple details\n            details = file_name + "\\n"\n            file_details.append(details)\n            \n# Create an empty list to store the file details\nfile_details = []\n\n# Traverse all the main directories\nfor directory in directories:\n    traverse_directories(directory)\n\nheading = "PLAYLISTS: {}\\n\\n".format(len(file_details))\n\nwith open(output_file, "w") as file:\n    file.write(heading)\n    file.writelines(file_details)\n\nprint("Music List Generated", file_details)\n')
+            </Action>
+            <Action Name="Enabling to intercept; only when required" XML_Guid="{A4B4EF94-0C57-43A8-B9B6-B51F1A8D9A67}">
+                EventGhost.Comment()
+            </Action>
+            <Action XML_Guid="{E8D4008A-BEFF-478C-93B7-37D1A4CF9242}">
+                EventGhost.EnableItem(XmlIdLink(30))
+            </Action>
+            <Action Name="Uploading generated file to GD; further intercepted by Join" XML_Guid="{A4B4EF94-0C57-43A8-B9B6-B51F1A8D9A67}">
+                EventGhost.Comment()
+            </Action>
+            <Action XML_Guid="{6582920A-FFC1-4946-A4DE-5E61B915ABD8}">
+                AutoRemote.SendMessage(u'realme GT AR', '', u'eBxMlOBRIIc:APA91bEcVboHS1zVILEahWooSwihH8Ft2MciHwPmeTORXjWe7Xzzn2wWQyYinoSNEl9EvS9vrlkPWCbkH9O196hUdVOnAJBbvGKOUDiPTdhz0u41Muuqd8lDMQaT9iZ4AV_BtGlPgxBG', u'temp', u'', u'', u'', '', u'{eg.event.payload.arcomm[0]}', u'temp')
+            </Action>
+            <Action Name="Note: All data values are irrelevant (device also); only the upload link is required" XML_Guid="{A4B4EF94-0C57-43A8-B9B6-B51F1A8D9A67}">
+                EventGhost.Comment()
+            </Action>
+        </Macro>
+        <Macro Name="Redirect AR Generated GD Links to Join (Send Push)" id="30" Enabled="False" XML_Guid="{1B45F7A7-F3E3-4402-B69D-218AF7E7D0BA}">
+            <Event Name="AutoRemote.FilesSent" XML_Guid="{98648828-6EEE-4C85-879B-BA094AAF0193}" />
+            <Action Name="Link intercepted by Join &gt; Sending to Device ID" XML_Guid="{A4B4EF94-0C57-43A8-B9B6-B51F1A8D9A67}">
+                EventGhost.Comment()
+            </Action>
+            <Action Name='Template: JoinPushDeviceOne(text="joinlist_mymusic", title="EventGhost", file="&lt;link&gt;")' XML_Guid="{64405435-59A7-4FA2-AC87-15F3297CB344}">
+                EventGhost.Comment()
+            </Action>
+            <Action Name="Send Push to Join" XML_Guid="{5693D852-A4BA-45E7-ACA2-9D6EF1BFA77A}">
+                EventGhost.PythonCommand(u'JoinPushDeviceOne(text="joinlist_mymusic", file="files," + eg.event.payload[0])')
+            </Action>
+            <Action Name="Disabling: Task complete" XML_Guid="{A4B4EF94-0C57-43A8-B9B6-B51F1A8D9A67}">
+                EventGhost.Comment()
+            </Action>
+            <Action XML_Guid="{5377800E-5924-4F5C-ABD6-FDBB33DDCDA5}">
+                EventGhost.DisableItem(XmlIdLink(30))
+            </Action>
+        </Macro>
+    </Folder>
+    <Macro Name="Custom - Get Winamp Playlist Info" XML_Guid="{462243F3-7FFE-4DD0-B1B2-0F74B76EF989}" Expanded="True">
+        <Event Name="AutoRemote.Message.push" XML_Guid="{84B82A80-71E7-4CBE-BB40-6439080BCD16}" />
+        <Action XML_Guid="{1FA084C2-2CE3-4F98-8221-530F1BBF835B}">
+            Winamp.ClearPlaylist()
+        </Action>
+        <Action Name="Get Winamp Playlist Info - name, duration, items" Enabled="False" XML_Guid="{5E45010A-75CC-4A35-A602-E54761D7821B}">
+            EventGhost.PythonScript(u'import subprocess\nimport os\n\ndef get_total_duration(playlist_path):\n    total_duration = 0\n    total_items = 0\n    \n    eg.playlist_name = os.path.basename(playlist_path)\n\n    with open(playlist_path, \'r\') as playlist_file:\n        for line in playlist_file:\n            line = line.strip()\n            if line.startswith(\'#\'):  # Skip comments or metadata lines\n                continue\n            try:\n                # Use ffprobe command to get the audio file duration\n                cmd = \'ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "{}"\'.format(line)\n                result = subprocess.check_output(cmd, shell=True)\n                duration = float(result)\n                total_duration += duration\n                total_items += 1\n            except Exception as e:\n                print("Error processing file {}: {}".format(line, e))\n\n    return total_duration, total_items\n\ndef format_duration(total_duration):\n    hours = int(total_duration / 3600)\n    minutes = int((total_duration % 3600) / 60)\n    seconds = int(total_duration % 60)\n    \n    formatted_duration = "{:02d}:{:02d}:{:02d}".format(hours, minutes, seconds)\n    return formatted_duration\n\n# Example usage\n# playlist_path = r\'C:\\Users\\tsaty\\Documents\\Automation\\test.m3u\'  # Replace with your playlist file path\n\n# Set the variable for the directory path\ndirectory_path = r\'C:\\Users\\Logansfury\\Desktop\\Music Playlists\'\n\n# Set the variable for the playlist file name\nplaylist_file = eg.event.payload.arcomm + ".m3u"\n\nplaylist_path = os.path.join(directory_path, playlist_file)\neg.playlist_duration_sec, eg.playlist_items = get_total_duration(playlist_path)\neg.playlist_duration = format_duration(eg.playlist_duration_sec)\nprint("Playlist Duration: {}".format(eg.playlist_duration))\nprint("Playlist Items: {}".format(eg.playlist_items))\n\n#eg.playlist_name = Playlist name\n#eg.playlist_duration_sec = Playlist duration in seconds (type - float)\n#eg.playlist_duration = Playlist duration in HH:MM:SS\n#eg.playlist_items = Playlist items\n')
+        </Action>
+        <Action Name="Get Winamp Playlist Info - name, duration, items" XML_Guid="{5E45010A-75CC-4A35-A602-E54761D7821B}">
+            EventGhost.PythonScript(u'import subprocess\nimport os\n\ndef get_total_duration(playlist_path):\n    \n    total_duration = 0\n    total_items = 0\n    \n    eg.playlist_name = os.path.basename(playlist_path)\n\n    with open(playlist_path, \'r\') as playlist_file:\n        for line in playlist_file:\n            line = line.strip()\n            if line.startswith(\'#\'):  # Skip comments or metadata lines\n                continue\n            try:\n                # Use ffprobe command to get the audio file duration\n                cmd = \'ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "{}"\'.format(line)\n                result = subprocess.check_output(cmd, shell=True)\n                duration = float(result)\n                total_duration += duration\n                total_items += 1\n                \n            except Exception as e:\n                print("Error processing file {}: {}".format(line, e))\n\n    return total_duration, total_items\n\ndef get_mp3_duration(mp3_path):\n    try:\n        # Use ffprobe command to get the audio file duration\n        cmd = \'ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 "{}"\'.format(mp3_path)\n        result = subprocess.check_output(cmd, shell=True)\n        duration = float(result)\n        return duration\n    except Exception as e:\n        print("Error processing file {}: {}".format(mp3_path, e))\n        return None\n\ndef format_duration(total_duration):\n    hours = int(total_duration / 3600)\n    minutes = int((total_duration % 3600) / 60)\n    seconds = int(total_duration % 60)\n    \n    formatted_duration = "{:02d}:{:02d}:{:02d}".format(hours, minutes, seconds)\n    return formatted_duration\n\ntype = eg.event.payload.arcomm[0]\nname = eg.event.payload.arcomm[1]\n\nif type == "playlist":\n    # Example usage\n    #playlist_path = r\'C:\\Users\\tsaty\\Documents\\Automation\\test.m3u\'  # Replace with your playlist file path\n    # Set the variable for the directory path\n    directory_path = r\'C:\\Users\\Logansfury\\Desktop\\Music Playlists\'\n\n    # Set the variable for the playlist file name\n    playlist_file = name + ".m3u"\n\n    playlist_path = os.path.join(directory_path, playlist_file)\n    eg.playlist_duration_sec, eg.playlist_items = get_total_duration(playlist_path)\n    eg.playlist_duration = format_duration(eg.playlist_duration_sec)\n    print("Playlist Duration: {}".format(eg.playlist_duration))\n    print("Playlist Items: {}".format(eg.playlist_items))\n    eg.play_duration_sec = eg.playlist_duration_sec\n    eg.play_duration = eg.playlist_duration\n    \nif type == "mp3":\n    #mp3_path = r\'C:\\Users\\tsaty\\Documents\\Automation\\test.mp3\'\n    directory_path = r\'C:\\MP3s\'\n    \n    mp3_file = name + ".mp3"\n    \n    mp3_path = os.path.join(directory_path, mp3_file)\n    mp3_duration_sec = get_mp3_duration(mp3_path)\n    eg.globals.mp3_duration_sec = mp3_duration_sec\n    if mp3_duration_sec is not None:\n        eg.mp3_duration = format_duration(mp3_duration_sec)\n        print("MP3 Duration: {}".format(eg.mp3_duration))\n        print("MP3 Items: 1")\n        eg.play_duration_sec = mp3_duration_sec\n        eg.play_duration = eg.mp3_duration\n        \n        \n#eg.playlist_name = Playlist name\n#eg.playlist_duration_sec = Playlist duration in seconds (type - float)\n#eg.playlist_duration = Playlist duration in HH:MM:SS\n#eg.playlist_items = Playlist items\n\n#eg.globals.mp3_duration_sec = Playlist duration in seconds (type - float)\n#eg.mp3_duration = Playlist duration in HH:MM:SS\n\n#eg.play_duration_sec = Play (mp3 or playlist) duration in seconds (type - float)\n#eg.play_duration = Play (mp3 or playlist) duration in HH:MM:SS\n# Use these as they will be based on the last action.')
+        </Action>
+        <Action Name="Play Duration Long Format" XML_Guid="{82F1942B-84AA-4EE4-A5F2-4780F6BE600F}">
+            EventGhost.PythonScript(u'import datetime\n\ndef speak_time(time_str):\n    time_parts = time_str.split(":")\n    hours = int(time_parts[0])\n    minutes = int(time_parts[1])\n    seconds = int(time_parts[2])\n\n    time_text = ""\n\n    # Check and add hours if non-zero\n    if hours &gt; 0:\n        time_text += "{} hours ".format(hours)\n\n    # Check and add minutes if non-zero\n    if minutes &gt; 0 or hours &gt; 0:\n        time_text += "{} minutes ".format(minutes)\n\n    # Always add seconds\n    time_text += "{} seconds".format(seconds)\n    \n    eg.play_duration_long = time_text\n    #eg.play_duration_long can be accessed anywhere\n    #eg.play_duration is in the format HH:mm:ss &amp; it\'s not overwritten\n\n    # Use EventGhost\'s Speech plugin to speak the time\n    # You might need to configure the Speech action for the correct output.\n    #eg.plugins.Speech.TextToSpeech(u\'Microsoft Zira Desktop - English (United States)\', 0, eg.play_duration_long, u\'\', 50, u\'Headphones (realme Buds Air 3)\')\n\nspeak_time(eg.play_duration)')
+        </Action>
+        <Action XML_Guid="{12014404-C186-45DB-BD1B-F61240D89C34}">
+            Speech.TextToSpeech(u'Microsoft Zira Desktop - English (United States)', 0, u'Loading {eg.event.payload.arcomm[1]} on server PC. Total play time: {eg.play_duration_long}', u'', 50, u'Speakers (Realtek High Definition Audio)')
+        </Action>
+    </Macro>
+</EventGhost>
