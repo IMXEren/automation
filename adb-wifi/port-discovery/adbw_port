@@ -6,14 +6,15 @@ dir="$(
 )"
 bin_name="$(basename "$0")"
 chmod 744 "$0" &>/dev/null
-chmod 744 "$dir/${bin_name}.bin" &>/dev/null
+chmod 744 "$dir/${bin_name}_arm.bin" &>/dev/null
+chmod 744 "$dir/${bin_name}_arm64.bin" &>/dev/null
 
 if [ $(getprop ro.build.version.sdk) -gt 28 ]; then
 	if getprop ro.product.cpu.abilist | grep -q "64"; then
-		exec /system/bin/linker64 "$dir/${bin_name}.bin"
+		exec /system/bin/linker64 "$dir/${bin_name}_arm64.bin"
 	else
-		exec /system/bin/linker "$dir/${bin_name}.bin"
+		exec /system/bin/linker "$dir/${bin_name}_arm.bin"
 	fi
 else
-	exec "$dir/${bin_name}.bin"
+	exec "$dir/${bin_name}_arm64.bin" || exec "$dir/${bin_name}_arm.bin"
 fi
