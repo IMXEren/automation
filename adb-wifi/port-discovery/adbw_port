@@ -11,8 +11,10 @@ chmod 744 "$dir/${bin_name}_arm64.bin" &>/dev/null
 
 if [ $(getprop ro.build.version.sdk) -gt 28 ]; then
 	if getprop ro.product.cpu.abilist | grep -q "64"; then
+		echo Running using /system/bin/linker64
 		exec /system/bin/linker64 "$dir/${bin_name}_arm64.bin"
 	else
+		echo Running using /system/bin/linker
 		exec /system/bin/linker "$dir/${bin_name}_arm.bin"
 	fi
 else
