@@ -16,7 +16,7 @@ func main() {
 				continue
 			}
 
-			fmt.Println(entry.Port)
+			fmt.Printf("ipv4: %s, port: %d\n", entry.AddrV4, entry.Port)
 		}
 	}()
 
